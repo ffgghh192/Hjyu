@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마술용품 사이트 모음</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      padding: 30px;
+      background: #f5f5f5;
+      color: #333;
+    }
+    h1 {
+      color: #222;
+    }
+    .category {
+      margin: 10px 0;
+      padding: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .site-links {
+      margin-top: 20px;
+      display: none;
+    }
+    .site-links a {
+      display: block;
+      margin: 5px 0;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .site-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>마술용품 사이트 모음</h1>
+  <p>카테고리를 선택하면 관련 사이트 링크가 나타납니다.</p>
+
+  <div class="category">
+    <button onclick="showSites('card')">🎴 카드 마술</button>
+    <button onclick="showSites('coin')">🪙 동전 마술</button>
+    <button onclick="showSites('props')">🧰 마술 도구</button>
+    <button onclick="showSites('all')">🌐 전체 보기</button>
+  </div>
+
+  <div id="card" class="site-links">
+    <h3>카드 마술 용품</h3>
+    <a href="https://www.hismagic.co.kr/" target="_blank">HisMagic</a>
+    <a href="https://www.magiccastle.co.kr/" target="_blank">매직캐슬</a>
+    <a href="https://www.seomagic.co.jp/" target="_blank">SEO MAGIC (일본)</a>
+    <a href="https://www.vanishingincmagic.com/" target="_blank">Vanishing Inc. (해외)</a>
+  </div>
+
+  <div id="coin" class="site-links">
+    <h3>동전 마술 용품</h3>
+    <a href="https://www.penguinmagic.com/" target="_blank">Penguin Magic</a>
+    <a href="https://www.themagiccafe.com/" target="_blank">The Magic Cafe (정보 포럼)</a>
+  </div>
+
+  <div id="props" class="site-links">
+    <h3>마술 도구</h3>
+    <a href="https://www.magicshop.co.uk/" target="_blank">Magic Shop UK</a>
+    <a href="https://www.tannens.com/" target="_blank">Tannen's Magic</a>
+  </div>
+
+  <div id="all" class="site-links">
+    <h3>전체 사이트</h3>
+    <a href="https://www.hismagic.co.kr/" target="_blank">HisMagic</a>
+    <a href="https://www.magiccastle.co.kr/" target="_blank">매직캐슬</a>
+    <a href="https://www.seomagic.co.jp/" target="_blank">SEO MAGIC</a>
+    <a href="https://www.vanishingincmagic.com/" target="_blank">Vanishing Inc.</a>
+    <a href="https://www.penguinmagic.com/" target="_blank">Penguin Magic</a>
+    <a href="https://www.themagiccafe.com/" target="_blank">The Magic Cafe</a>
+    <a href="https://www.magicshop.co.uk/" target="_blank">Magic Shop UK</a>
+    <a href="https://www.tannens.com/" target="_blank">Tannen's Magic</a>
+  </div>
+
+  <script>
+    function showSites(category) {
+      const all = document.querySelectorAll('.site-links');
+      all.forEach(el => el.style.display = 'none');
+      document.getElementById(category).style.display = '
